@@ -81,12 +81,13 @@ try:
         group_call, 
         USER
     )
+
 except ModuleNotFoundError:
     import os
     import sys
     import subprocess
-    file=os.path.abspath("requirements.txt")
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', file, '--upgrade'])
+    file=os.path.abspath("")
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', '--upgrade'])
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 if Config.DATABASE_URI:
