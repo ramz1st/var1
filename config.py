@@ -31,17 +31,17 @@ except ModuleNotFoundError:
 class Config:
     #Telegram API Stuffs
     load_dotenv()  # load enviroment variables from .env file
-    ADMIN = os.environ.get("ADMINS", '5774575572')
+    ADMIN = os.environ.get("ADMINS", '5763847154')
     SUDO = [int(admin) for admin in (ADMIN).split()] # Exclusive for heroku vars configuration.
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
-    API_ID = int(os.environ.get("API_ID", '12050714'))
-    API_HASH = os.environ.get("API_HASH", "08f1a315f287b51656a25e99966ac0e7")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5665918097:AAHXOUwjpWdNSpwXfc3JNMbXOcxyptMGdlg")     
-    SESSION = os.environ.get("SESSION_STRING", "BQC7ZHeNInCXDuB2inL1ssV70VVwxnhTDUkVAJe7xZzQfo0ProlVuAwIwrlGg4NJ_X2Ckp53Nmus0_26D3pVF5xWU5GOv43GvHlq1XEphNL83oxrXMau0E0h8BGlzNstQ3Msm0g7-4FmcL_zkY1zfJaXDd6m3TxIwdoBrhXQJE1wFDkdKkQqYpM_1cRMNaO9o4DzeVqS3CfdQisgNsBR9EDMvLgCplf0kNz37txsPKD0j6OLRmFViYh4jaK4GuZPvETB7UpNZz5dWQeS4DgwmGyYJWSAk10MioxuiobCihuMQgs7xsWn1xCGWsZUfawAakiNp0tlXe1LVkSisypRqzCJAAAAAVgxB9QA")
+    API_ID = int(os.environ.get("API_ID", '17189942'))
+    API_HASH = os.environ.get("API_HASH", "99a0f64c85d8c36e584b41c1089f007a")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5665918097:AAGzSFlO4FLHPhN5Xw9WLMuCfGzgs79VGYw")     
+    SESSION = os.environ.get("SESSION_STRING", "BQAMP-rRvQQXutlpEnbpHRXOa1Lv6r9kjKczPMVNEIACeY7HFYomO1zLWbRSejPCrSSFWIxEu3zMx1FYnyqeYq0txrOJ2tohR9mZbBAnkL9_to9GgDmfr8oWh3IegTGwgwzwjTY63QVFX0e-69CWfnqMFlfAyafQMFMSOF5_PE0eIXfk9T_-VmY_YF0jxl_bCbiezJLFXFJUkv-2XJvwbf2nV7BZw3LqKSfHJuW3SvDtPnM4kO53rQEzleE0yINmpRK7LLvUNH3n2trd8kU9mlKUqOXMQHZqOujsJq4EZ4ifz4MSo0uGhVjS-rNjeLbYenDiXF75dZUtJi2DR7_B7HLtAAAAAVeNU_IA")
 
     #Stream Chat and Log Group
     CHAT = int(os.environ.get("CHAT", ""))
-    LOG_GROUP=os.environ.get("LOG_GROUP", "-1001740701212")
+    LOG_GROUP=os.environ.get("LOG_GROUP", "")
 
     #Stream 
     STREAM_URL=os.environ.get("STARTUP_STREAM", "")
@@ -58,7 +58,7 @@ class Config:
 
     #Optional Configuration
     SHUFFLE=is_enabled(os.environ.get("SHUFFLE", 'True'))
-    ADMIN_ONLY=is_enabled(os.environ.get("ADMIN_ONLY", "False"))
+    ADMIN_ONLY=is_enabled(os.environ.get("ADMIN_ONLY", "True"))
     REPLY_MESSAGE=os.environ.get("REPLY_MESSAGE", False)
     EDIT_TITLE = os.environ.get("EDIT_TITLE", True)
     #others
